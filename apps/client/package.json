@@ -1,0 +1,30 @@
+{
+  "name": "@syncorswim/client",
+  "version": "0.1.0",
+  "private": true,
+  "description": "syncorswim desktop client.",
+  "type": "module",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "npm run build:main && npm run build:renderer",
+    "build:main": "tsc --build",
+    "build:renderer": "vite build",
+    "dev": "node scripts/dev.mjs",
+    "preview": "vite preview",
+    "start": "electron .",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@syncorswim/shared": "0.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "electron": "^42.5.0",
+    "vite": "^8.1.0"
+  }
+}
